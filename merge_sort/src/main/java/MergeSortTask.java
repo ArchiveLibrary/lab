@@ -1,10 +1,5 @@
 import java.util.Arrays;
 
-/**
- * Task 1 - 27/09/2021
- * Merge sort
- */
-
 public class MergeSortTask {
 
     private static int[] merge(int[] leftArray, int[] rightArray) {
@@ -29,7 +24,7 @@ public class MergeSortTask {
         return resultArray;
     }
 
-    public static int[] sort(int[] array){
+    public static int[] mergeSort(int[] array){
         if(array == null || array.length < 2) {
             return array;
         }
@@ -39,14 +34,14 @@ public class MergeSortTask {
         System.arraycopy(array, 0, rightArray, 0, array.length / 2);
         System.arraycopy(array, array.length / 2, leftArray, 0, array.length - array.length / 2);
 
-        rightArray = sort(rightArray);
-        leftArray = sort(leftArray);
+        rightArray = mergeSort(rightArray);
+        leftArray = mergeSort(leftArray);
 
         return merge(rightArray, leftArray);
     }
 
     public static void main(String[] args) {
-        int[] testArray = new int[] {4, 3, 9, 10, 2, 2, 9, 7, 9};
-        System.out.println(Arrays.toString(sort(testArray)));
+        int[] testArray = new int[] {4, 3, 9, 10, 2, 2, 9, 7, 9, 10};
+        System.out.println(Arrays.toString(mergeSort(testArray)));
     }
 }
