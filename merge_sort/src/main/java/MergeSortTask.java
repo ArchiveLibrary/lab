@@ -42,6 +42,7 @@ public class MergeSortTask {
 
     public static void main(String[] args) {
         int[] testArray = new int[] {4, 3, 9, 10, 2, 2, 9, 7, 9, 10};
-        System.out.println(Arrays.toString(mergeSort(testArray)));
+        int[] sortedArray = mergeSort(testArray);
+        System.out.println(Arrays.toString(sortedArray));
     }
 }
