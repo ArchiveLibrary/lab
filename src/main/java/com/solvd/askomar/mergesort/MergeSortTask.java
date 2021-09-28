@@ -1,3 +1,5 @@
+package com.solvd.askomar.mergesort;
+
 import java.util.Arrays;
 
 public class MergeSortTask {
